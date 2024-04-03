@@ -1,14 +1,13 @@
 package com.myshopping.MyShopping.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.util.UUID;
 
 @Entity // create table for this class
 public class AppUsers {
     @Id // primary key
+    @GeneratedValue(strategy = GenerationType.AUTO)
     UUID id;
     @Column(nullable = false)
     String name;
